@@ -2,8 +2,29 @@
 import streamlit as st
 from agent import agent_executor
 
+
+
 st.title("NL2SQL Agent")
 st.write("Agent has full context of the database and can answer any query")
+
+# Display database schema image
+st.subheader("Database Schema")
+st.image("schema.png")
+
+# Add explanatory text
+st.write("""
+This database contains information about:
+- Customers and their details
+- Employees and reporting structure  
+- Invoices and line items
+- Music tracks, albums, artists and genres
+- Playlists and playlist tracks
+
+You can ask questions about any (literally any) of these entities and their relationships. Ask it to do something you would tell a human sql engineer to do.
+""")
+
+# Add a divider for better visual organization
+st.divider()
 
 # Create a text input for user queries with a more descriptive placeholder
 user_query = st.text_input(
@@ -14,6 +35,10 @@ user_query = st.text_input(
 
 # Add a container for the response
 response_container = st.container()
+
+
+
+
 
 # Process query when entered
 if user_query:
@@ -31,7 +56,7 @@ if user_query:
             
             # Display previous responses in expanders
             if len(all_events) > 1:
-                with st.expander("See intermediate steps"):
+                with st.expander("See agentic workflow"):
                     for event in all_events[:-1]:
                         st.info(event["messages"][-1].content)
             
