@@ -10,4 +10,4 @@ if not os.environ.get("GROQ_API_KEY"):
     raise ValueError("Please set GROQ_API_KEY in your .env file")
 
 # Initialize the LLM
-llm = init_chat_model("llama-3.2-1b-preview", model_provider="groq")
+llm = init_chat_model("llama-3.2-90b-vision-preview", model_provider="groq")
