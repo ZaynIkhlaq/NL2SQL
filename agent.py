@@ -20,4 +20,3 @@ print(prompt_template.input_variables)
 
 system_message = prompt_template.format(dialect="SQLite", top_k=5)
 agent_executor = create_react_agent(llm, toolkit.get_tools(), prompt=system_message)
-

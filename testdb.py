@@ -1,5 +1,4 @@
 import sqlite3
-
 import requests
 from langchain_community.utilities.sql_database import SQLDatabase
 from sqlalchemy import create_engine
@@ -21,7 +20,5 @@ def get_engine_for_chinook_db():
         connect_args={"check_same_thread": False},
     )
 
-
 engine = get_engine_for_chinook_db()
-
 db = SQLDatabase(engine)
