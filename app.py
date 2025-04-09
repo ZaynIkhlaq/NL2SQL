@@ -26,8 +26,14 @@ if user_query:
         
         # Display the response in the container
         with response_container:
-            for event in events:
-                st.info(event["messages"][-1].content)
-else:
-    with response_container:
-        st.info("👋 Enter your question above and I'll help you query the database!")
+            # Create a list to store all events
+            all_events = list(events)
+            
+            # Display previous responses in expanders
+            if len(all_events) > 1:
+                with st.expander("See intermediate steps"):
+                    for event in all_events[:-1]:
+                        st.info(event["messages"][-1].content)
+            
+            # Always show the final response
+            st.info(all_events[-1]["messages"][-1].content)
