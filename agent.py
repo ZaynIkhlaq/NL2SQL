@@ -15,8 +15,5 @@ toolkit = SQLDatabaseToolkit(db=db, llm=llm)
 
 prompt_template = hub.pull("langchain-ai/sql-agent-system-prompt")
 
-assert len(prompt_template.messages) == 1
-print(prompt_template.input_variables)
-
 system_message = prompt_template.format(dialect="SQLite", top_k=5)
 agent_executor = create_react_agent(llm, toolkit.get_tools(), prompt=system_message)
