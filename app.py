@@ -59,6 +59,5 @@ if user_query:
                 with st.expander("See agentic workflow"):
                     for event in all_events[:-1]:
                         st.info(event["messages"][-1].content)
-            
-            # Always show the final response
-            st.info(all_events[-1]["messages"][-1].content)
+            # Always show the final response in a green container
+            st.success(all_events[-1]["messages"][-1].content)
