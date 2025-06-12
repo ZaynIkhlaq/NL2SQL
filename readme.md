@@ -35,8 +35,7 @@ Try the demo here: **[nl2sqldb.streamlit.app](https://nl2sqldb.streamlit.app)**
 
 ## Getting Started
 ```bash
-# Clone the repository
-git clone <repository-url>
+# Clone the repo
 
 # Install dependencies
 pip install -r requirements.txt
