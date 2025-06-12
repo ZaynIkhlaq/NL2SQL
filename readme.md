@@ -1,7 +1,7 @@
 # NL2SQL - Natural Language to Structured Query Language 
 
 ## Overview
-An advanced database management system that converts natural language queries into SQL commands, built as part of a Semester 4 project.
+An advanced database management system that converts natural language queries into SQL commands.
 
 ## Demo
 Try the demo here: **[nl2sqldb.streamlit.app](https://nl2sqldb.streamlit.app)**
