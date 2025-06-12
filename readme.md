@@ -28,7 +28,7 @@ Try the demo here: **[nl2sqldb.streamlit.app](https://nl2sqldb.streamlit.app)**
 - **Language**: Python
 
 ## Requirements
-- Python 3.x
+- Python 
 - Streamlit
 - LangChain
 - SQLite3
