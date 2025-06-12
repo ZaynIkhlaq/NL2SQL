@@ -50,5 +50,6 @@ streamlit run app.py
 - "How many orders were placed last month?"
 
 ## Ending Notes
-Made this for my fourth semester. Bossman couldn't see the value. Hope Seecs will have better teachers in the future (low probability) 
+Made this for my fourth semester. Bossman couldn't see the value. 
+Hope Seecs will have better teachers in the future (low probability).
 Feel free to fork and use, you might have better luck than I did.
